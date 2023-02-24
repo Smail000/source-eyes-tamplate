@@ -23,7 +23,7 @@ Wanna more? Click [here](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 # Installing
 
 ```
-git clone https://github.com/Smail000/source-eyes-tamplate.git
+git clone https://github.com/Smail000/source-eyes-template.git
 cd source-eyes-tamplate
 npm i
 ```
