@@ -1,6 +1,12 @@
-import React from "react"
+import React, { useCallback, useState } from "react"
 import { Heading, Text } from '@chakra-ui/react'
 import * as Logo from "../assets/se-logo.png"
+
+import reloader from "./tools/reloader"
+import { io } from "socket.io-client"
+
+const socket = io()
+reloader(socket)
 
 export default function App() {
     return (

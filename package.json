@@ -5,11 +5,11 @@
   "source": "src/index.html",
   "type": "module",
   "scripts": {
-    "parcel:watch": "parcel --dist-dir ./build",
+    "parcel:watch": "parcel watch --dist-dir ./build",
     "parcel:dev": "parcel serve --dist-dir ./build --port 3001 --open --lazy",
     "parcel:prod": "parcel build --dist-dir ./build",
     "server:dev": "nodemon",
-    "server:prod": "cross-env MODE=production PORT=3000 ts-node server/app.ts"
+    "server:prod": "cross-env MODE=production PORT=3000 ts-node -T server/app.ts"
   },
   "keywords": [
     "react",
@@ -26,6 +26,7 @@
     "@types/node": "^18.14.1",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
+    "buffer": "^5.7.1",
     "cross-env": "^7.0.3",
     "nodemon": "^2.0.20",
     "parcel": "^2.8.3",
@@ -44,6 +45,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.1",
     "socket.io": "^4.6.1",
+    "socket.io-client": "^4.6.1",
     "ts-node": "^10.9.1"
   }
 }

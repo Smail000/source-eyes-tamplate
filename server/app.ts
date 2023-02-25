@@ -3,14 +3,21 @@ import express from "express"
 import { createServer } from "http"
 import path from "path"
 import ip from "ip"
+import { Server } from "socket.io"
 
 const server = express()
 const httpServer = createServer(server)
+const io = new Server(httpServer)
+
 const PORT: string = process.env.PORT || "3000"
 const MODE: string = process.env.MODE || "development"
 
 server.use(express.static('./build'))
 server.use(express.json())
+
+io.on("connection", (socket) => {
+    socket.emit("reloader_mode", MODE)
+});
 
 server.get('/*', (req, res) => {
     res.sendFile(path.resolve('build', 'index.html'))
