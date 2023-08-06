@@ -1,32 +1,30 @@
 
 # Source Eyes template
 
-Base for quick start developing web application using React + TypeScipt + Parcel (Frontend) and Express (Backend). You may replace Express on another technology.
+Base for quick start developing web application using React + TypeScipt + Parcel (Frontend) and Express (Backend). You may replace Express on another backend technology.
 
 # Dependencies
 
 - Programming Language — [Typescript](https://www.typescriptlang.org/) + [Books/Docs](https://www.typescriptlang.org/docs/handbook/intro.html)
-- WebFramework — [React](https://ru.reactjs.org/) + [Books/Docs](https://flaviocopes.com/book/read/react/)
-  - Components pack — [Chakra UI + Docs](https://chakra-ui.com/)
-  - Animations — [Framer Motion + Docs](https://www.framer.com/motion/)
+- WebLibrary — [React](https://ru.reactjs.org/) + [Books/Docs](https://flaviocopes.com/book/read/react/)
   - State managering — [Redux](https://redux.js.org/) + [Docs](https://redux.js.org/introduction/learning-resources)
   - Routing — [React router + Docs](https://reactrouter.com/en/main/start/tutorial)
   - Draggable elements — [React Draggable + Docs](https://www.npmjs.com/package/react-draggable)
-  - Framework for visual disigning — [Craft JS + Demo](https://craft.js.org/) + [Docs](https://craft.js.org/docs/overview)
-- Transferring data — [SocketIO + Docs](https://socket.io/)
+  - CSS Extension — [Less + Docs](https://lesscss.org/features/)
+- Transferring data — [WebSocket + Docs](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket)
 - Development dependencies
   - Easy usage for some env — [CrossEnv + Docs](https://www.npmjs.com/package/cross-env)
   - Bundler — [Parcel + Docs](https://parceljs.org/recipes/react/)
 
-Wanna more? Click [here](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+# ToDo's
 
-# Features
-
-- Hot reload (both with parcel and custom server)
+- Develop extension for WebSocket for reconnection
+- Integrate testing module
+- Add loading animation before JS and React initialisation
 
 # Installing
 
-NodeJS v16> is required. See [here](https://nodejs.org/en/)
+NodeJS >16v is required. See [here](https://nodejs.org/en/)
 
 ```bash
 git clone https://github.com/Smail000/source-eyes-template.git
@@ -36,7 +34,7 @@ npm i
 
 # Usage
 
-Development mode (parcel base server) (will start server with live reload)
+Development mode (parcel base server) (will start server with hot reload)
 
 ```bash
 npm run parcel:dev

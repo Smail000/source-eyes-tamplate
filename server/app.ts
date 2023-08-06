@@ -3,11 +3,11 @@ import express from "express"
 import { createServer } from "http"
 import path from "path"
 import ip from "ip"
-import { Server } from "socket.io"
+import ws, { WebSocketServer } from 'ws';
 
 const server = express()
 const httpServer = createServer(server)
-const io = new Server(httpServer)
+const wss = new WebSocketServer({ server: httpServer })
 
 const PORT: string = process.env.PORT || "3000"
 const MODE: string = process.env.MODE || "development"
@@ -15,9 +15,12 @@ const MODE: string = process.env.MODE || "development"
 server.use(express.static('./build'))
 server.use(express.json())
 
-io.on("connection", (socket) => {
-    socket.emit("reloader_mode", MODE)
-});
+
+wss.on('connection', (client: MyWebSocket) => {
+    setInterval(() => {
+        client.send(`reloader_mode::${MODE}`)
+    }, 1000)
+})
 
 server.get('/*', (req, res) => {
     res.sendFile(path.resolve('build', 'index.html'))
