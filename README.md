@@ -22,9 +22,7 @@ Base for quick start developing web application using React + TypeScipt + Parcel
 
 # ToDo's
 
-- Develop extension for WebSocket for reconnection
 - Integrate testing module
-- Add loading animation before JS and React initialisation
 
 # Installing
 
