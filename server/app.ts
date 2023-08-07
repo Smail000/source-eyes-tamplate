@@ -16,7 +16,8 @@ server.use(express.static('./build'))
 server.use(express.json())
 
 io.on('connection', (socket: Socket) => {
-    console.log('a user connected');
+    console.log('User connected');
+    socket.emit("set-mode", MODE)
 });
 
 server.get('/*', (req, res) => {
