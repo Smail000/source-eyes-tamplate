@@ -1,4 +1,8 @@
 
+# Preview
+
+![preview](./src/assets/prev.png)
+
 # Source Eyes template
 
 Base for quick start developing web application using React + TypeScipt + Parcel (Frontend) and Express (Backend). You may replace Express on another backend technology.
