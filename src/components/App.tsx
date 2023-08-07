@@ -1,5 +1,7 @@
 import React from "react"
 
+import * as style from "./App.module.less"
+
 import {
     BrowserRouter as Router,
     Routes,
@@ -11,7 +13,7 @@ import SomePage from "./pages/SomePage/SomePage"
 export default function App() {
     return (
         <Router>
-            <div>
+            <div className={style.wrapper}>
                 <Routes>
                     <Route path="/" element={<SomePage />} />
                 </Routes>
@@ -19,8 +21,3 @@ export default function App() {
         </Router>
     )
 }
-
-// export default function App() {
-
-
-// }

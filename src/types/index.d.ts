@@ -1,6 +1,3 @@
 
 declare module "*.png"
-
-interface MyWebSocket extends WebSocket {
-    id: string;
-}
+declare module "*.module.less"
