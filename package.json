@@ -1,7 +1,7 @@
 {
   "name": "template",
-  "version": "1.0.0",
-  "description": "Parcel+React+TypeScript+Express template",
+  "version": "0.0.1",
+  "description": "Parcel+React+Redux+TypeScript+Express template",
   "source": "src/index.html",
   "type": "module",
   "scripts": {
@@ -11,13 +11,15 @@
     "parcel:prod": "rm -rf ./build && parcel build --dist-dir ./build",
     "server:dev": "nodemon",
     "server:prod": "cross-env MODE=production PORT=3000 ts-node -T server/app.ts",
-    "clear": "rm -rf .parcel-cache"
+    "clear": "rm -rf .parcel-cache && rm -rf node_modules"
   },
   "keywords": [
     "react",
+    "redux",
     "typescript",
     "parcel",
-    "express"
+    "express",
+    "socketIO"
   ],
   "author": "Smail000",
   "license": "ISC",
@@ -39,15 +41,14 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
-    "@chakra-ui/react": "^2.5.1",
     "@reduxjs/toolkit": "^1.9.3",
     "express": "^4.18.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^8.1.2",
     "react-router-dom": "^6.8.1",
     "socket.io": "^4.7.2",
     "socket.io-client": "^4.7.2",
-    "ts-node": "^10.9.1",
-    "ws": "^8.13.0"
+    "ts-node": "^10.9.1"
   }
 }
